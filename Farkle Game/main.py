@@ -46,4 +46,5 @@ def play_turn(self):
         if dice_to_roll = 0:
             print("All dice have been scored! You get 6 new dice.")
             dice_to_roll = 6 #Resets to 6 dice for the next roll
-            print(f"Current Turn score: {turn_score}")
+        print(f"Current Turn score: {turn_score}")
+
