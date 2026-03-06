@@ -53,7 +53,7 @@ def play_turn(self):
             return turn_score   #If the user inputs anything other than "R", then the current points will return to bank
         
 if __name__ == "__main__":
-    name = input("Enter player name: ")
+    name_input = input("Enter player name: ")
     game = FarkleGame(name_input)   #Creates a game instance
     game.run()  #Starts the game loop 
 
