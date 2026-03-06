@@ -51,4 +51,23 @@ def play_turn(self):
         choice = input("Roll again [R] or Bank Points [B]?").upper()
         if choice != "R":
             return turn_score   #If the user inputs anything other than "R", then the current points will return to bank
+        
+if __name__ == "__main__":
+    name = input("Enter player name: ")
+    game = FarkleGame(name_input)   #Creates a game instance
+    game.run()  #Starts the game loop 
 
+def run(self):
+    print(f"Welcome {self.player_name} to Farkle! ")
+    print("--------------------------------------------")
+
+    while self.player.total_score < self.win_threshold:
+        input("\n Press Enter to Start your Turn...")
+        self.player.total_score += self.play_turn()
+        print("*********************************")
+        print(f"TOTAL SCORE: {self.player.total_score}")
+        print("*********************************")
+
+
+        print(f"\n Congratulations {self.player.name}! You won with {self.player.total_score}! :D")
+        self.save.score() # Saves the final score to the CSV file
