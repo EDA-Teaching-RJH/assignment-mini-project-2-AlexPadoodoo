@@ -2,6 +2,8 @@
 
 import random #Simulate the dice rolling
 from farkle_lib import Validator, calculate_score #Imports the custom library functions
+import csv #Used for saving and loading game data
+import os #Used for checking if the save file exists
 
 class Entity:
     def __init__(self, name):
