@@ -33,3 +33,12 @@ def play_turn(self):
         print(f"\n Rolling {dice_to_roll} dice...")
 
         roll = [random.randint(1, 6) for i in range(dice_to_roll)]
+
+        roll_score, scoring_count = calculate_score(roll) #Calculate score to see how many points have been rolled
+        if roll_score == 0:
+            print("***********************************")
+            print("BUST! You lost your turn points.")
+            print("***********************************")
+            return 0
+        turn_score += roll_score   #Adds roll points to total score
+        dice_to_roll -= scoring_count #Remove the dice used for scoring
