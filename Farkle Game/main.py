@@ -42,3 +42,8 @@ def play_turn(self):
             return 0
         turn_score += roll_score   #Adds roll points to total score
         dice_to_roll -= scoring_count #Remove the dice used for scoring
+
+        if dice_to_roll = 0:
+            print("All dice have been scored! You get 6 new dice.")
+            dice_to_roll = 6 #Resets to 6 dice for the next roll
+            print(f"Current Turn score: {turn_score}")
