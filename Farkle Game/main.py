@@ -24,3 +24,12 @@ class FarkleGame:
         self.player = Player(player_name) #Creates a new player object
         self.win_threshold = 2000 # Sets the goal to 2000 points
         self.history_file = "farkle_history.csv" #File to save game history
+
+def play_turn(self):
+    turn_score = 0
+    dice_to_roll = 6
+
+    while True:
+        print(f"\n Rolling {dice_to_roll} dice...")
+
+        roll = [random.randint(1, 6) for i in range(dice_to_roll)]
