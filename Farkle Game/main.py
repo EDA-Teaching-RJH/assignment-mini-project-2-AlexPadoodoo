@@ -23,3 +23,4 @@ class FarkleGame:
 
         self.player = Player(player_name) #Creates a new player object
         self.win_threshold = 2000 # Sets the goal to 2000 points
+        self.history_file = "farkle_history.csv" #File to save game history
