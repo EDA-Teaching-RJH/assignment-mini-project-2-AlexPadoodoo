@@ -48,3 +48,7 @@ def play_turn(self):
             dice_to_roll = 6 #Resets to 6 dice for the next roll
         print(f"Current Turn score: {turn_score}")
 
+        choice = input("Roll again [R] or Bank Points [B]?").upper()
+        if choice != "R":
+            return turn_score   #If the user inputs anything other than "R", then the current points will return to bank
+
